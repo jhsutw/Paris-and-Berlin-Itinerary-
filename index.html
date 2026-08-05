@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18332d">
+  <title>巴黎 × 柏林｜2026 歐洲之旅</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+TC:wght@400;500;600;700&display=swap');
+    :root{--ink:#18332d;--paper:#f8f4ec;--cream:#fffdf8;--line:#d8d0c2;--red:#b8513f;--green:#2f6257;--gold:#cf9b4b;--muted:#66736d;--shadow:0 14px 40px rgba(24,51,45,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans TC',sans-serif;line-height:1.65}button{font:inherit}a{color:inherit}
+    .hero{position:relative;overflow:hidden;min-height:560px;padding:24px clamp(22px,6vw,84px) 54px;color:#fff;background:linear-gradient(120deg,rgba(18,42,37,.97),rgba(34,77,67,.9)),radial-gradient(circle at 80% 10%,#d8a455,transparent 42%)}
+    .hero:after{content:"PARIS  —  BERLIN";position:absolute;right:-25px;bottom:-58px;color:rgba(255,255,255,.055);font:500 clamp(72px,13vw,190px)/1 'DM Serif Display';white-space:nowrap}
+    nav{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:1180px;margin:auto}.brand{font:400 22px 'DM Serif Display';letter-spacing:.03em}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{padding:8px 12px;border-radius:999px;text-decoration:none;color:#e9f0ed;font-size:13px}.navlinks a:hover{background:rgba(255,255,255,.1)}
+    .hero-inner{position:relative;z-index:1;max-width:1180px;margin:92px auto 0}.eyebrow{color:#edc98c;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:700}.hero h1{max-width:760px;margin:12px 0 22px;font:400 clamp(54px,9vw,112px)/.9 'DM Serif Display';letter-spacing:-.035em}.hero h1 em{color:#e5b96c;font-style:italic}.lead{max-width:620px;margin:0;color:#e3ece9;font-size:clamp(16px,2vw,20px)}
+    .trip-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.pill{display:flex;align-items:center;gap:9px;padding:10px 14px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.08);font-size:13px}.pill b{color:#f1cd8c}
+    main{max-width:1180px;margin:auto;padding:72px clamp(20px,5vw,56px)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:26px}.section-head h2{margin:0;font:400 clamp(36px,5vw,58px)/1 'DM Serif Display'}.section-head p{max-width:480px;margin:0;color:var(--muted)}
+    .stays{display:grid;grid-template-columns:1fr 1fr;gap:20px}.stay{position:relative;overflow:hidden;min-height:330px;padding:30px;border-radius:24px;color:#fff;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:flex-end}.stay.paris{background:linear-gradient(0deg,rgba(61,28,25,.93),rgba(104,59,45,.35)),linear-gradient(135deg,#a66c56,#d9b28d)}.stay.berlin{background:linear-gradient(0deg,rgba(17,38,43,.94),rgba(41,75,77,.32)),linear-gradient(135deg,#55787a,#b4aa8c)}.stay .city{position:absolute;top:22px;right:24px;font:400 58px 'DM Serif Display';color:rgba(255,255,255,.18)}.stay h3{font:400 29px/1.15 'DM Serif Display';margin:0 0 8px}.stay p{margin:0;color:#f4eee4}.scores{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.score{padding:6px 10px;border-radius:9px;background:rgba(255,255,255,.14);font-size:12px}.score b{color:#ffd88f}
+    #itinerary{margin-top:92px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.filter{border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 16px;border-radius:999px;cursor:pointer}.filter.active,.filter:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .days{position:relative}.days:before{content:"";position:absolute;left:59px;top:26px;bottom:30px;width:1px;background:var(--line)}.day{display:grid;grid-template-columns:120px 1fr;gap:24px;margin-bottom:18px;transition:.25s}.day.hidden{display:none}.date{text-align:right;padding-top:20px}.date strong{display:block;font:400 30px 'DM Serif Display'}.date span{color:var(--muted);font-size:12px}.day-card{position:relative;background:var(--cream);border:1px solid #e7dfd3;border-radius:18px;padding:23px 26px;box-shadow:0 5px 18px rgba(39,53,47,.04)}.day-card:before{content:"";position:absolute;left:-91px;top:29px;width:11px;height:11px;border:4px solid var(--paper);border-radius:50%;background:var(--red);box-shadow:0 0 0 1px var(--red)}.day[data-city="berlin"] .day-card:before{background:var(--green);box-shadow:0 0 0 1px var(--green)}.day[data-city="transit"] .day-card:before{background:var(--gold);box-shadow:0 0 0 1px var(--gold)}.day-top{display:flex;justify-content:space-between;gap:15px;align-items:start}.day h3{margin:0;font-size:19px}.tag{white-space:nowrap;padding:4px 9px;border-radius:8px;background:#f1ebe0;color:var(--muted);font-size:11px}.schedule{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.slot{padding-top:13px;border-top:1px solid #e8e1d6}.slot b{display:block;margin-bottom:5px;color:var(--red);font-size:11px;letter-spacing:.08em}.day[data-city="berlin"] .slot b{color:var(--green)}.slot span{font-size:13px;color:#495b55}.food{color:var(--ink)!important;font-weight:600}.note{margin-top:13px;padding:10px 12px;border-left:3px solid var(--gold);background:#fbf5e8;color:#6c5937;font-size:12px}
+    .two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;margin-top:92px}.panel{background:var(--cream);border:1px solid #e5ddd0;border-radius:22px;padding:28px}.panel h2{font:400 35px 'DM Serif Display';margin:0 0 20px}.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.check{display:flex;gap:10px;align-items:center;padding:11px 12px;border-radius:11px;background:#f4efe6;cursor:pointer;font-size:13px}.check input{accent-color:var(--green);width:17px;height:17px}.check:has(input:checked){color:var(--muted);text-decoration:line-through;opacity:.68}.rating{display:grid;place-items:center;min-height:100%;text-align:center;background:var(--ink);color:white}.big-score{font:400 82px/1 'DM Serif Display';color:#efc982}.rating p{max-width:270px;color:#dbe5e1;margin:14px auto 0}.rating small{display:block;margin-top:14px;color:#9eb4ad}
+    footer{margin-top:76px;padding:32px 20px;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:12px}
+    @media(max-width:760px){.navlinks{display:none}.hero{min-height:510px}.hero-inner{margin-top:82px}.stays,.two-col{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.days:before{left:6px}.day{grid-template-columns:1fr;padding-left:26px}.date{text-align:left;padding:0}.date strong{display:inline;margin-right:7px;font-size:23px}.day-card:before{left:-27px;top:29px}.schedule{grid-template-columns:1fr}.slot{padding-top:10px}.food-grid{grid-template-columns:1fr}.rating{min-height:310px}}
+    @media print{.hero{min-height:auto;padding:25px}.hero-inner{margin-top:40px}.navlinks,.filters{display:none}main{padding:30px}.day.hidden{display:grid}.stay,.day-card,.panel{break-inside:avoid;box-shadow:none}.two-col,#itinerary{margin-top:45px}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav><div class="brand">Voyage 2026</div><div class="navlinks"><a href="#stays">住宿</a><a href="#itinerary">每日行程</a><a href="#tastes">必吃清單</a></div></nav>
+    <div class="hero-inner">
+      <div class="eyebrow">August 14 — 23 · 10 Days</div>
+      <h1>Paris <em>to</em><br>Berlin</h1>
+      <p class="lead">從巴黎左岸的晨光，到柏林街頭的啤酒香。兩座城市、八晚住宿，一趟鬆弛又飽滿的歐洲夏日旅行。</p>
+      <div class="trip-meta"><div class="pill">✈️ <b>PHL</b> 往返</div><div class="pill">🇫🇷 巴黎 <b>4 晚</b></div><div class="pill">🇩🇪 柏林 <b>4 晚</b></div><div class="pill">🗓️ 2026 / 08 / 14–23</div></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="stays">
+      <div class="section-head"><h2>Two cities,<br>two moods.</h2><p>巴黎住進安靜的 13 區住宅街廓，柏林則以 Potsdamer Platz 為據點，把慢生活與市中心機動性平衡得剛剛好。</p></div>
+      <div class="stays">
+        <article class="stay paris"><span class="city">PARIS</span><div><h3>Le Vert Galant<br>Auberge Etchegorry</h3><p>8/15–8/19 · 約 US$120–140／晚</p><div class="scores"><span class="score">安全 <b>9.5</b></span><span class="score">CP 值 <b>9.5</b></span><span class="score">花園旅館</span></div></div></article>
+        <article class="stay berlin"><span class="city">BERLIN</span><div><h3>aletto Hotel<br>Potsdamer Platz</h3><p>8/19–8/23 · 約 €90–140／晚</p><div class="scores"><span class="score">安全 <b>9.5</b></span><span class="score">地點 <b>9.8</b></span><span class="score">市中心</span></div></div></article>
+      </div>
+    </section>
+
+    <section id="itinerary">
+      <div class="section-head"><h2>Daily itinerary</h2><p>點選城市可快速篩選。時間保留彈性，餐廳與熱門景點建議提早預約。</p></div>
+      <div class="filters" role="group" aria-label="城市篩選"><button class="filter active" data-filter="all">全部 10 天</button><button class="filter" data-filter="paris">🇫🇷 巴黎</button><button class="filter" data-filter="berlin">🇩🇪 柏林</button><button class="filter" data-filter="transit">✈️ 移動日</button></div>
+      <div class="days">
+        <article class="day" data-city="transit"><div class="date"><strong>8/14</strong><span>FRI · DAY 1</span></div><div class="day-card"><div class="day-top"><h3>費城 → 巴黎</h3><span class="tag">機上過夜</span></div><div class="schedule"><div class="slot"><b>下午</b><span>15:25 從 PHL 起飛</span></div><div class="slot"><b>轉機</b><span>蒙特婁轉機</span></div><div class="slot"><b>晚上</b><span>機上休息，迎接巴黎清晨</span></div></div></div></article>
+        <article class="day" data-city="paris"><div class="date"><strong>8/15</strong><span>SAT · DAY 2</span></div><div class="day-card"><div class="day-top"><h3>初見巴黎：左岸、塞納河與鐵塔</h3><span class="tag">抵達日</span></div><div class="schedule"><div class="slot"><b>上午</b><span>07:05 抵達 CDG · RER B + Metro · 寄放行李<br>Café de Flore · Rue Mouffetard</span></div><div class="slot"><b>下午</b><span class="food">L’As du Fallafel</span><span><br>巴黎聖母院 · 莎士比亞書店 · 塞納河散步</span></div><div class="slot"><b>晚上</b><span class="food">Le Relais de l’Entrecôte</span><span><br>艾菲爾鐵塔 · Trocadéro 夜景</span></div></div></div></article>
+        <article class="day" data-city="paris"><div class="date"><strong>8/16</strong><span>SUN · DAY 3</span></div><div class="day-card"><div class="day-top"><h3>羅浮宮與巴黎經典軸線</h3><span class="tag">藝術日</span></div><div class="schedule"><div class="slot"><b>上午</b><span>羅浮宮（建議預約 09:00）</span></div><div class="slot"><b>下午</b><span class="food">Angelina · 熱巧克力＋蒙布朗</span><span><br>杜樂麗花園 · 協和廣場 · 香榭麗舍</span></div><div class="slot"><b>晚上</b><span>凱旋門登頂<br><span class="food">Chez André</span></span></div></div></div></article>
+        <article class="day" data-city="paris"><div class="date"><strong>8/17</strong><span>MON · DAY 4</span></div><div class="day-card"><div class="day-top"><h3>蒙馬特藝術區與 Le Marais</h3><span class="tag">街區漫遊</span></div><div class="schedule"><div class="slot"><b>上午</b><span>聖心堂 · 蒙馬特散步</span></div><div class="slot"><b>下午</b><span class="food">Le Consulat</span><span><br>愛牆 · 小店逛街</span></div><div class="slot"><b>晚上</b><span>Le Marais 酒吧<br><span class="food">Berthillon 冰淇淋</span></span></div></div></div></article>
+        <article class="day" data-city="paris"><div class="date"><strong>8/18</strong><span>TUE · DAY 5</span></div><div class="day-card"><div class="day-top"><h3>凡爾賽一日遊</h3><span class="tag">近郊</span></div><div class="schedule"><div class="slot"><b>上午</b><span>前往凡爾賽宮 · 宮殿參觀</span></div><div class="slot"><b>下午</b><span>花園 · 大運河</span></div><div class="slot"><b>晚上</b><span>巴黎最後一餐<br><span class="food">Pink Mamma（需預約）</span></span></div></div></div></article>
+        <article class="day" data-city="transit"><div class="date"><strong>8/19</strong><span>WED · DAY 6</span></div><div class="day-card"><div class="day-top"><h3>巴黎 → 柏林</h3><span class="tag">換城市</span></div><div class="schedule"><div class="slot"><b>上午</b><span>搭機前往柏林</span></div><div class="slot"><b>下午</b><span>入住飯店 · Potsdamer Platz · 布蘭登堡門 · 國會大廈外觀</span></div><div class="slot"><b>晚上</b><span class="food">BRLO Brwhouse</span><span><br>德國啤酒＋豬腳</span></div></div></div></article>
+        <article class="day" data-city="berlin"><div class="date"><strong>8/20</strong><span>THU · DAY 7</span></div><div class="day-card"><div class="day-top"><h3>柏林歷史日</h3><span class="tag">城市記憶</span></div><div class="schedule"><div class="slot"><b>上午</b><span>East Side Gallery</span></div><div class="slot"><b>下午</b><span class="food">Curry 36</span><span><br>Checkpoint Charlie · 博物館島</span></div><div class="slot"><b>晚上</b><span>Hackescher Markt · 酒吧</span></div></div><div class="note">佩加蒙博物館目前長期整修；行前確認可開放區域，或以新博物館作為替代。</div></div></article>
+        <article class="day" data-city="berlin"><div class="date"><strong>8/21</strong><span>FRI · DAY 8</span></div><div class="day-card"><div class="day-top"><h3>波茨坦一日遊</h3><span class="tag">近郊</span></div><div class="schedule"><div class="slot"><b>上午</b><span>S-Bahn 約 40 分鐘 · 無憂宮</span></div><div class="slot"><b>下午</b><span>荷蘭區 · 公園漫步</span></div><div class="slot"><b>晚上</b><span>返回柏林<br><span class="food">Zur letzten Instanz</span></span></div></div></div></article>
+        <article class="day" data-city="berlin"><div class="date"><strong>8/22</strong><span>SAT · DAY 9</span></div><div class="day-card"><div class="day-top"><h3>柏林慢遊與最後購物</h3><span class="tag">自由步調</span></div><div class="schedule"><div class="slot"><b>上午</b><span>柏林大教堂</span></div><div class="slot"><b>下午</b><span>Tiergarten · 勝利紀念柱 · Mall of Berlin · KaDeWe</span></div><div class="slot"><b>晚上</b><span class="food">Hofbräu Berlin</span><span><br>德國豬腳＋啤酒</span></div></div></div></article>
+        <article class="day" data-city="transit"><div class="date"><strong>8/23</strong><span>SUN · DAY 10</span></div><div class="day-card"><div class="day-top"><h3>柏林 → 費城</h3><span class="tag">回程</span></div><div class="schedule"><div class="slot"><b>清晨</b><span>建議約 06:30 起床 · 07:15 前往機場</span></div><div class="slot"><b>機場</b><span>建議 07:45 左右抵達 BER</span></div><div class="slot"><b>起飛</b><span>10:45 BER → PHL</span></div></div><div class="note">國際航班建議至少提前 3 小時抵達機場；原訂 09:15 抵達只剩 90 分鐘，風險較高。</div></div></article>
+      </div>
+    </section>
+
+    <section id="tastes" class="two-col">
+      <div class="panel"><h2>Must-eat checklist</h2><div class="food-grid">
+        <label class="check"><input type="checkbox">🥐 巴黎可頌</label><label class="check"><input type="checkbox">🥩 Steak Frites</label><label class="check"><input type="checkbox">🧅 法式洋蔥湯</label><label class="check"><input type="checkbox">🦆 油封鴨腿</label><label class="check"><input type="checkbox">🍮 Crème Brûlée</label><label class="check"><input type="checkbox">🍫 Angelina 熱巧克力</label><label class="check"><input type="checkbox">🍦 Berthillon 冰淇淋</label><label class="check"><input type="checkbox">🌭 Currywurst</label><label class="check"><input type="checkbox">🥨 Pretzel</label><label class="check"><input type="checkbox">🥩 Schweinshaxe</label><label class="check"><input type="checkbox">🍺 德國生啤</label><label class="check"><input type="checkbox">🍰 Apfelstrudel</label>
+      </div></div>
+      <div class="panel rating"><div><div class="eyebrow">Overall rating</div><div class="big-score">9.8</div><p>安全、交通、價格與旅行節奏取得漂亮平衡。</p><small>第一次巴黎 × 柏林的理想組合</small></div></div>
+    </section>
+  </main>
+  <footer>Paris × Berlin · August 2026<br>行程與營業資訊可能異動，出發前請再次確認預約與交通。</footer>
+  <script>
+    const buttons=[...document.querySelectorAll('.filter')];
+    const days=[...document.querySelectorAll('.day')];
+    buttons.forEach(btn=>btn.addEventListener('click',()=>{
+      buttons.forEach(b=>b.classList.toggle('active',b===btn));
+      days.forEach(day=>day.classList.toggle('hidden',btn.dataset.filter!=='all'&&day.dataset.city!==btn.dataset.filter));
+    }));
+    const checks=[...document.querySelectorAll('.check input')];
+    checks.forEach((box,i)=>{box.checked=localStorage.getItem('euro-food-'+i)==='1';box.addEventListener('change',()=>localStorage.setItem('euro-food-'+i,box.checked?'1':'0'))});
+  </script>
+</body>
+</html>
