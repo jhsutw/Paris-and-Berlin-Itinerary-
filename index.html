@@ -23,14 +23,15 @@
     .todo-section{margin-top:92px}.todo-summary{display:flex;align-items:center;gap:12px;margin-bottom:18px}.todo-progress{flex:1;height:8px;overflow:hidden;border-radius:999px;background:#e4ddd1}.todo-progress span{display:block;width:0;height:100%;background:var(--green);transition:width .25s}.todo-count{white-space:nowrap;color:var(--muted);font-size:12px}.todo-groups{display:grid;grid-template-columns:1fr 1fr;gap:18px}.todo-group{padding:24px;border:1px solid #e5ddd0;border-radius:20px;background:var(--cream)}.todo-group.urgent{border-top:4px solid var(--red)}.todo-group.later{border-top:4px solid var(--gold)}.todo-group h3{margin:0 0 4px;font:400 25px 'DM Serif Display'}.todo-group>p{margin:0 0 16px;color:var(--muted);font-size:12px}.todo-item{display:grid;grid-template-columns:22px 1fr auto;gap:11px;align-items:start;padding:14px 0;border-top:1px solid #e8e1d6}.todo-item input{width:18px;height:18px;margin-top:3px;accent-color:var(--green)}.todo-item label{cursor:pointer}.todo-item label b{display:block;font-size:14px}.todo-item label small{display:block;color:var(--muted);margin-top:3px}.todo-item:has(input:checked) label{opacity:.58;text-decoration:line-through}.todo-link{padding:5px 9px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:11px;white-space:nowrap}.todo-link:hover{background:var(--ink);color:#fff}.walkin{margin-top:16px;padding:15px 18px;border-radius:14px;background:#e9f0ec;color:#38564e;font-size:12px}
     .budget-section{margin-top:92px}.budget-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}.budget-total{padding:32px;border-radius:22px;background:var(--ink);color:#fff}.budget-total .eyebrow{margin-bottom:13px}.budget-total strong{display:block;font:400 clamp(48px,7vw,76px)/1 'DM Serif Display';color:#efc982}.budget-total p{margin:15px 0 0;color:#dbe5e1}.budget-total .fixed{display:inline-block;margin-top:24px;padding:7px 11px;border:1px solid rgba(255,255,255,.2);border-radius:999px;color:#fff;font-size:12px}.budget-list{padding:9px 26px;background:var(--cream);border:1px solid #e5ddd0;border-radius:22px}.budget-row{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;padding:17px 0;border-bottom:1px solid #e8e1d6}.budget-row:last-child{border:0}.budget-row .ico{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:#f2ece1}.budget-row b{display:block;font-size:14px}.budget-row small{display:block;color:var(--muted)}.budget-row strong{font:400 19px 'DM Serif Display';white-space:nowrap}.budget-note{margin-top:14px;color:var(--muted);font-size:12px}
     .two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;margin-top:92px}.panel{background:var(--cream);border:1px solid #e5ddd0;border-radius:22px;padding:28px}.panel h2{font:400 35px 'DM Serif Display';margin:0 0 20px}.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.check{display:flex;gap:10px;align-items:center;padding:11px 12px;border-radius:11px;background:#f4efe6;cursor:pointer;font-size:13px}.check input{accent-color:var(--green);width:17px;height:17px}.check:has(input:checked){color:var(--muted);text-decoration:line-through;opacity:.68}.rating{display:grid;place-items:center;min-height:100%;text-align:center;background:var(--ink);color:white}.big-score{font:400 82px/1 'DM Serif Display';color:#efc982}.rating p{max-width:270px;color:#dbe5e1;margin:14px auto 0}.rating small{display:block;margin-top:14px;color:#9eb4ad}
+    .meal-section{margin-top:92px}.meal-days{display:grid;gap:18px}.meal-day{padding:24px;border:1px solid #e5ddd0;border-radius:22px;background:var(--cream)}.meal-day-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:18px}.meal-day-head h3{margin:0;font:400 25px 'DM Serif Display'}.meal-day-head span{color:var(--muted);font-size:12px}.meal-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px}.meal-block h4{margin:0 0 10px;color:var(--red);font-size:12px;letter-spacing:.12em}.meal-options{display:grid;gap:8px}.meal-option{display:flex;justify-content:space-between;gap:12px;padding:11px 13px;border-radius:12px;background:#f4efe6;text-decoration:none}.meal-option:hover{box-shadow:0 5px 16px #382e2414}.meal-option b{display:block;font-size:13px}.meal-option small{display:block;margin-top:2px;color:var(--muted);font-size:11px}.meal-option em{flex:none;align-self:center;padding:4px 7px;border-radius:999px;background:#e2ece8;color:#38564e;font-style:normal;font-size:10px}.meal-method{margin-top:16px;padding:14px 16px;border-radius:12px;background:#eee6d9;color:#66594b;font-size:11px;line-height:1.6}
     footer{margin-top:76px;padding:32px 20px;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:12px}
-    @media(max-width:760px){.navlinks{display:none}.hero{min-height:510px}.hero-inner{margin-top:82px}.stays,.two-col,.budget-wrap,.vibe-grid,.flight-grid,.todo-groups{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.days:before{left:6px}.day{grid-template-columns:1fr;padding-left:26px}.date{text-align:left;padding:0}.date strong{display:inline;margin-right:7px;font-size:23px}.day-card:before{left:-27px;top:29px}.schedule{grid-template-columns:1fr}.slot{padding-top:10px}.food-grid{grid-template-columns:1fr}.budget-list{padding:7px 18px}.budget-row{grid-template-columns:36px 1fr}.budget-row>strong{grid-column:2}.todo-item{grid-template-columns:22px 1fr}.todo-link{grid-column:2;width:max-content}.rating{min-height:310px}}
+    @media(max-width:760px){.navlinks{display:none}.hero{min-height:510px}.hero-inner{margin-top:82px}.stays,.two-col,.budget-wrap,.vibe-grid,.flight-grid,.todo-groups,.meal-pair{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.days:before{left:6px}.day{grid-template-columns:1fr;padding-left:26px}.date{text-align:left;padding:0}.date strong{display:inline;margin-right:7px;font-size:23px}.day-card:before{left:-27px;top:29px}.schedule{grid-template-columns:1fr}.slot{padding-top:10px}.food-grid{grid-template-columns:1fr}.budget-list{padding:7px 18px}.budget-row{grid-template-columns:36px 1fr}.budget-row>strong{grid-column:2}.todo-item{grid-template-columns:22px 1fr}.todo-link{grid-column:2;width:max-content}.rating{min-height:310px}.meal-day-head{align-items:start;flex-direction:column}}
     @media print{.hero{min-height:auto;padding:25px}.hero-inner{margin-top:40px}.navlinks,.filters{display:none}main{padding:30px}.day.hidden{display:grid}.stay,.day-card,.panel{break-inside:avoid;box-shadow:none}.two-col,#itinerary{margin-top:45px}}
   </style>
 </head>
 <body>
   <header class="hero">
-    <nav><div class="brand">Voyage 2026</div><div class="navlinks"><a href="#stays">住宿</a><a href="#flights">班機</a><a href="#itinerary">每日行程</a><a href="#todo">待辦</a><a href="#budget">預算</a><a href="#tastes">必吃清單</a></div></nav>
+    <nav><div class="brand">Voyage 2026</div><div class="navlinks"><a href="#stays">住宿</a><a href="#flights">班機</a><a href="#itinerary">每日行程</a><a href="#meals">餐廳選擇</a><a href="#todo">待辦</a><a href="#budget">預算</a></div></nav>
     <div class="hero-inner">
       <div class="eyebrow">August 15 — 23 · 9 Days</div>
       <h1>Paris <em>to</em><br>Berlin</h1>
@@ -70,6 +71,103 @@
         <article class="day" data-city="berlin"><div class="date"><strong>8/22</strong><span>SAT · DAY 8</span></div><div class="day-card"><div class="day-top"><h3>Prenzlauer Berg 咖啡與柏林慢遊</h3><span class="tag">咖啡日</span></div><div class="schedule"><div class="slot"><b>上午</b><span>Prenzlauer Berg 咖啡廳早午餐<br>街區與小店散步</span></div><div class="slot"><b>下午</b><span>柏林大教堂 · Tiergarten<br>時間足夠再去 KaDeWe</span></div><div class="slot"><b>晚上</b><span><span class="food">Zur letzten Instanz</span> 或在地德式餐廳<br>有興趣可看早場演出，23:00 前回飯店</span></div></div><div class="note">柏林減少一天後刪除波茨坦；保留市區核心、猶太博物館與 Prenzlauer Berg，整體比較不趕。</div></div></article>
         <article class="day" data-city="transit"><div class="date"><strong>8/23</strong><span>SUN · DAY 9</span></div><div class="day-card"><div class="day-top"><h3>柏林 → 法蘭克福 → 費城</h3><span class="tag">回程</span></div><div class="schedule"><div class="slot"><b>清晨</b><span>06:30 起床 · 約 07:15 前往 BER<br>建議 07:45 左右抵達 T1</span></div><div class="slot"><b>FRA 轉機</b><span>10:45 LH179 → 11:55<br>13:15 UA9658 · 轉機 80 分鐘</span></div><div class="slot"><b>抵達</b><span>16:05 抵達 PHL A<br>所有時間均為當地時間</span></div></div><div class="note">訂位資料寫「提領並重新託運行李」，但票價又不含免費託運；務必事前向航空公司確認。80 分鐘轉機時間偏緊。</div></div></article>
       </div>
+    </section>
+
+    <section id="meals" class="meal-section">
+      <div class="section-head"><h2>Lunch or dinner?</h2><p>每天午、晚餐各 3 間，依當天動線安排。點餐廳即可開啟 Google Maps，查看出發當下的最新評分、評論數、營業時間與路線。</p></div>
+      <div class="meal-days">
+        <article class="meal-day"><div class="meal-day-head"><h3>8/16 · 拉丁區與 13 區</h3><span>抵達日｜不用跨區</span></div><div class="meal-pair">
+          <div class="meal-block"><h4>LUNCH · 抵達後輕食</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Chez+Nicos+Paris"><span><b>Chez Nicos</b><small>Rue Mouffetard · 希臘可麗餅</small></span><em>Google 4.8</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Au+P%27tit+Grec+Paris"><span><b>Au P’tit Grec</b><small>拉丁區 · 超大鹹可麗餅</small></span><em>評論多</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Kozy+Notre+Dame+Paris"><span><b>Kozy Notre-Dame</b><small>早午餐 · 咖啡</small></span><em>Google 4.8</em></a>
+          </div></div>
+          <div class="meal-block"><h4>DINNER · 飯店附近</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Il+Etait+Un+Square+Paris"><span><b>Il était un square</b><small>13 區 · 法式漢堡</small></span><em>Google 4.8</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=La+Jacobine+Paris"><span><b>La Jacobine</b><small>經典法菜 · 洋蔥湯</small></span><em>高評價</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Le+Petit+Pontoise+Paris"><span><b>Le Petit Pontoise</b><small>左岸小酒館 · 油封鴨</small></span><em>口碑穩</em></a>
+          </div></div>
+        </div></article>
+
+        <article class="meal-day"><div class="meal-day-head"><h3>8/17 · Palais-Royal、拱廊與鐵塔</h3><span>建築 City Walk</span></div><div class="meal-pair">
+          <div class="meal-block"><h4>LUNCH · Galerie Vivienne 附近</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Vaudeville+Paris"><span><b>Vaudeville</b><small>華麗老字號 Brasserie</small></span><em>Google 4.5</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=RAGAZZI+VIVIENNE+Paris"><span><b>RAGAZZI VIVIENNE</b><small>義大利料理 · Rue Vivienne</small></span><em>Google 4.7</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Bistrot+Victoires+Paris"><span><b>Bistrot Victoires</b><small>平價法式 Bistro</small></span><em>人氣店</em></a>
+          </div></div>
+          <div class="meal-block"><h4>DINNER · 艾菲爾鐵塔周邊</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Le+Relais+de+l%27Entrecote+Marbeuf+Paris"><span><b>Le Relais de l’Entrecôte</b><small>牛排薯條 · 小紅書高頻</small></span><em>評論多</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=La+Fontaine+de+Mars+Paris"><span><b>La Fontaine de Mars</b><small>傳統法菜 · 近鐵塔</small></span><em>Google 4.4</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Les+Cocottes+Paris"><span><b>Les Cocottes</b><small>鑄鐵鍋法菜 · Rue Saint-Dominique</small></span><em>口碑店</em></a>
+          </div></div>
+        </div></article>
+
+        <article class="meal-day"><div class="meal-day-head"><h3>8/18 · 歌劇院、老佛爺與聖母院</h3><span>15:15 已預約</span></div><div class="meal-pair">
+          <div class="meal-block"><h4>LUNCH · 歌劇院附近</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Hanoi+Ca+Phe+Paris"><span><b>Hanoi Cà Phê</b><small>老佛爺旁 · 越南料理</small></span><em>評論多</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+de+la+Paix+Paris"><span><b>Café de la Paix</b><small>歌劇院景觀 · 經典場景</small></span><em>地標店</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Bouillon+Chartier+Grands+Boulevards"><span><b>Bouillon Chartier</b><small>平價傳統法菜 · 評論量大</small></span><em>人氣店</em></a>
+          </div></div>
+          <div class="meal-block"><h4>DINNER · 拉丁區／Le Marais</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Le+Petit+Bal+Perdu+Paris"><span><b>Le Petit Bal Perdu</b><small>你的指定餐廳 · 需電話預約</small></span><em>首選</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Le+Colimacon+Paris"><span><b>Le Colimaçon</b><small>Le Marais · 法式料理</small></span><em>Google 4.7</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Au+Bourguignon+du+Marais+Paris"><span><b>Au Bourguignon du Marais</b><small>勃根地菜 · 牛肉紅酒燉</small></span><em>Google 4.6</em></a>
+          </div></div>
+        </div></article>
+
+        <article class="meal-day"><div class="meal-day-head"><h3>8/19 · 香榭麗舍與蒙馬特</h3><span>一路逛到聖心堂夜景</span></div><div class="meal-pair">
+          <div class="meal-block"><h4>LUNCH · 香榭麗舍／凱旋門</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Le+Relais+de+l%27Entrecote+Marbeuf+Paris"><span><b>Le Relais de l’Entrecôte</b><small>牛排薯條 · 排隊名店</small></span><em>評論多</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=L%27Alsace+Champs+Elysees+Paris"><span><b>L’Alsace</b><small>香榭大道 · 法式海鮮</small></span><em>24H 人氣</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Flora+Danica+Paris"><span><b>Flora Danica</b><small>北歐菜 · 庭院環境</small></span><em>口碑穩</em></a>
+          </div></div>
+          <div class="meal-block"><h4>DINNER · 蒙馬特</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Bouillon+Pigalle+Paris"><span><b>Bouillon Pigalle</b><small>平價法菜 · LGBTQ+ friendly</small></span><em>Google 4.6</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Sacree+Fleur+Paris"><span><b>Sacrée Fleur</b><small>牛排與法菜 · 蒙馬特</small></span><em>高評價</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Le+Moulin+de+la+Galette+Paris"><span><b>Le Moulin de la Galette</b><small>歷史風車餐廳 · 氣氛首選</small></span><em>Google 4.4</em></a>
+          </div></div>
+        </div></article>
+
+        <article class="meal-day"><div class="meal-day-head"><h3>8/20 · 巴黎 → 柏林</h3><span>依實際班機彈性選</span></div><div class="meal-pair">
+          <div class="meal-block"><h4>LUNCH · 巴黎出發前／抵達後</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Chez+Nicos+Paris"><span><b>Chez Nicos</b><small>若中午後才離開巴黎</small></span><em>快速</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Saravanaa+Bhavan+Potsdamer+Platz"><span><b>Saravanaa Bhavan</b><small>Potsdamer Platz · 南印度素食</small></span><em>Google 4.6</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=AMRIT+Ebertstrasse+Berlin"><span><b>AMRIT</b><small>布蘭登堡門附近 · 印度菜</small></span><em>Google 4.7</em></a>
+          </div></div>
+          <div class="meal-block"><h4>DINNER · Potsdamer Platz</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=BRLO+Brwhouse+Berlin"><span><b>BRLO Brwhouse</b><small>精釀啤酒 · 德式料理</small></span><em>原定首選</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Monte+Mente+Berlin"><span><b>Monte Mente</b><small>地中海料理 · Bellevuestraße</small></span><em>Google 4.6</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=POTS+Restaurant+Berlin"><span><b>POTS</b><small>現代德國菜 · 想吃精緻一點</small></span><em>Google 4.6</em></a>
+          </div></div>
+        </div></article>
+
+        <article class="meal-day"><div class="meal-day-head"><h3>8/21 · 柏林歷史與 Schöneberg</h3><span>街頭小吃＋同志街區</span></div><div class="meal-pair">
+          <div class="meal-block"><h4>LUNCH · Kreuzberg／猶太博物館</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Curry+36+Mehringdamm+Berlin"><span><b>Curry 36</b><small>Currywurst · 柏林代表</small></span><em>評論多</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Mustafas+Gemuse+Kebap+Berlin"><span><b>Mustafa’s Gemüse Kebap</b><small>蔬菜雞肉 Döner · 排隊名店</small></span><em>Google 4.2</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=bite+Friedrichstrasse+41+Berlin"><span><b>bite.</b><small>Checkpoint Charlie 附近 · 快速</small></span><em>Google 4.9</em></a>
+          </div></div>
+          <div class="meal-block"><h4>DINNER · Schöneberg</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Ruyam+Gemuse+Kebab+Hauptstrasse+Berlin"><span><b>Rüyam Gemüse Kebab</b><small>高分 Döner · Schöneberg</small></span><em>Google 4.9</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Sissi+Restaurant+Berlin"><span><b>Sissi</b><small>奧地利菜 · Motzstraße 附近</small></span><em>順路</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Feinbergs+Berlin"><span><b>Feinberg’s</b><small>以色列料理 · Nürnberger Straße</small></span><em>人氣店</em></a>
+          </div></div>
+        </div></article>
+
+        <article class="meal-day"><div class="meal-day-head"><h3>8/22 · Prenzlauer Berg 與 Mitte</h3><span>咖啡早午餐＋德國菜</span></div><div class="meal-pair">
+          <div class="meal-block"><h4>LUNCH · Prenzlauer Berg</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Anna+Blume+Berlin"><span><b>Anna Blume</b><small>花店咖啡館 · 早午餐</small></span><em>評論多</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Krone+Berlin"><span><b>Café Krone</b><small>Oderberger Straße · 咖啡早午餐</small></span><em>人氣店</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Chay+Long+Berlin"><span><b>Chay Long</b><small>越南蔬食 · Raumerstraße</small></span><em>Google 4.8</em></a>
+          </div></div>
+          <div class="meal-block"><h4>DINNER · Mitte／回飯店方向</h4><div class="meal-options">
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Zur+letzten+Instanz+Berlin"><span><b>Zur letzten Instanz</b><small>1621 年老餐廳 · 歷史體驗</small></span><em>Google 4.2</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Staendige+Vertretung+Berlin"><span><b>Ständige Vertretung</b><small>德國菜 · 河岸附近</small></span><em>4.6 · 7K+</em></a>
+            <a class="meal-option" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Gaffel+Haus+Berlin"><span><b>Gaffel Haus Berlin</b><small>德式料理 · 啤酒</small></span><em>4.5 · 2K+</em></a>
+          </div></div>
+        </div></article>
+      </div>
+      <div class="meal-method">篩選方式（查詢：2026/8/14）：優先選 Google 約 4.4 以上且評論量具參考性的店，再加入小紅書常見的巴黎牛排薯條／Bouillon、柏林 Currywurst／Döner、Prenzlauer Berg 咖啡早午餐。少數 4.2–4.4 的老字號因評論量大、代表性強而保留，旁邊均另有高分替代選擇。Google 數字會變動，請以點開後的即時頁面為準。</div>
     </section>
 
     <section id="todo" class="todo-section">
